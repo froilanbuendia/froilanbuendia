@@ -30,13 +30,13 @@ const Nav = () => {
       >
         <MdWorkOutline />
       </a>
-      {/* <a
+      <a
         href="#contact"
         onClick={() => setActiveNav("#contact")}
         className={activeNav === "#contact" ? "active" : ""}
       >
         <IoIosContact />
-      </a> */}
+      </a>
     </nav>
   );
 };
