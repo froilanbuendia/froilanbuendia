@@ -31,7 +31,7 @@ const Portfolio = () => {
           <h3>Sort Racer with Linux</h3>
           <div className="portfolio__item-cta">
             <a
-              href="https://www.nillysburgershop.comhttps://github.com/froilanbuendia/CECS_325/tree/master/prog_5/"
+              href="https://github.com/froilanbuendia/CECS_325/tree/master/prog_5/"
               className="btn btn-primary"
               target="_blank"
             >
@@ -43,10 +43,10 @@ const Portfolio = () => {
           <div className="portfolio__item-image">
             <img src={prog6} alt="" />
           </div>
-          <h3>Misspelled Words in a Book with Regex</h3>
+          <h3>Misspelled Words</h3>
           <div className="portfolio__item-cta">
             <a
-              href="https://www.nillysburgershop.comhttps://github.com/froilanbuendia/CECS_325/tree/master/prog_5/"
+              href="https://github.com/froilanbuendia/CECS_325/tree/master/prog_5/"
               className="btn btn-primary"
               target="_blank"
             >

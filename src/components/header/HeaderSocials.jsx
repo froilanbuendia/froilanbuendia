@@ -8,13 +8,13 @@ const HeaderSocials = () => {
         href="https://www.linkedin.com/in/froilan-buendia-97b602209"
         target="_blank"
       >
-        <BsLinkedin />
+        <BsLinkedin size={50} />
       </a>
       <a
         href="https://github.com/froilanbuendia?tab=repositories"
         target="_blank"
       >
-        <FaGithub />
+        <FaGithub size={50} />
       </a>
     </div>
   );

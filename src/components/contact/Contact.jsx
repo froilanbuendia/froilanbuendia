@@ -19,12 +19,12 @@ const Contact = () => {
               Send a Message
             </a>
           </article>
-          <article className="contact__option">
+          {/* <article className="contact__option">
             <RiMessengerLine className="contact__option-icon" />
             <h4>Messenger</h4>
             <h5>egatortutorials</h5>
             <a href="https://m.me/ernest.achiever">Send a Message</a>
-          </article>
+          </article> */}
           {/* <article className="contact__option">
             <BsWahtsapp/>
           </article>  */}
