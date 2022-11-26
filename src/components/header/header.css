@@ -70,7 +70,7 @@ header {
     height: 68vh;
   }
   .header__socials {
-    left: calc(41%);
+    left: calc(50%-4.5rem);
   }
 }
 
@@ -83,6 +83,6 @@ header {
   .header__socials,
   .scroll__down {
     /* display: none; */
-    left: 30%;
+    left: calc(50% - 4.5rem);
   }
 }
