@@ -35,7 +35,7 @@ const Portfolio = () => {
               className="btn btn-primary"
               target="_blank"
             >
-              GitHub
+              Sort Racer Code
             </a>
           </div>
         </article>
@@ -50,7 +50,7 @@ const Portfolio = () => {
               className="btn btn-primary"
               target="_blank"
             >
-              GitHub
+              Misspelled Words Code
             </a>
           </div>
         </article>
