@@ -23,10 +23,11 @@ const About = () => {
             </article>
           </div>
           <p>
-            Helloo I'm Froilan Buendia and I'm an aspiring Software Engineer
-            pursuing a Bachelor's Degree in Computer Science at California State
-            Univeristy of Long Beach. Some of my hobbies include working out,
-            playing basketball and the ukulele, and listening to music.
+            Hello my name is Froilan Buendia and I'm an aspiring Software
+            Engineer pursuing a Bachelor's Degree in Computer Science at
+            California State Univeristy of Long Beach. Some of my hobbies
+            include working out, playing basketball and the ukulele, and
+            listening to music.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk
