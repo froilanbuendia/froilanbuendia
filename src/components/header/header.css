@@ -1,5 +1,5 @@
 header {
-  height: 100vh;
+  height: 105vh;
   padding-top: 3rem;
   overflow: hidden;
 }
@@ -64,10 +64,17 @@ header {
   font-size: 0.9rem;
 } */
 
-/* Media Queries (Tablets) */
+/* Media Queries (Laptops/Tablets) */
 @media screen and (max-width: 1024px) {
-  .header {
-    height: 68vh;
+  header {
+    height: 700px;
+  }
+}
+
+/* Media Queries (Tablets) */
+@media screen and (max-width: 850px) {
+  header {
+    height: 70vh;
   }
   .header__socials {
     left: calc(50%-4.5rem);
@@ -75,9 +82,9 @@ header {
 }
 
 /* Media Queries (Phones) */
-@media screen and (max-width: 600px) {
-  .header {
-    height: 100vh;
+@media screen and (max-width: 849px) {
+  header {
+    height: 105vh;
   }
 
   .header__socials,
