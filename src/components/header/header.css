@@ -1,5 +1,5 @@
 header {
-  height: 105vh;
+  height: 100vh;
   padding-top: 3rem;
   overflow: hidden;
 }
@@ -74,7 +74,24 @@ header {
 /* Media Queries (Tablets) */
 @media screen and (max-width: 850px) {
   header {
+    height: 60vh;
+  }
+  .header__socials {
+    left: calc(50%-4.5rem);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
     height: 70vh;
+  }
+  .header__socials {
+    left: calc(50%-4.5rem);
+  }
+}
+@media screen and (max-width: 800px) and (max-height: 800px) {
+  header {
+    height: 100vh;
   }
   .header__socials {
     left: calc(50%-4.5rem);
@@ -82,9 +99,33 @@ header {
 }
 
 /* Media Queries (Phones) */
-@media screen and (max-width: 849px) {
+@media screen and (max-width: 450px) {
+  header {
+    height: 85vh;
+  }
+
+  .header__socials,
+  .scroll__down {
+    /* display: none; */
+    left: calc(50% - 4.5rem);
+  }
+}
+
+@media screen and (max-width: 380px) {
   header {
     height: 105vh;
+  }
+
+  .header__socials,
+  .scroll__down {
+    /* display: none; */
+    left: calc(50% - 4.5rem);
+  }
+}
+
+@media screen and (max-width: 300px) and (max-height: 660px) {
+  header {
+    height: 120vh;
   }
 
   .header__socials,
