@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Lato";
+  src: url(../../../assets/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url(../../../assets/fonts/Lato-Bold.ttf);
+}
+.aboutMe {
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.me {
+  border: 3px solid var(--primary-text-color);
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 70vh;
+  background-color: whitesmoke;
+  border-radius: 3rem;
+}
+
+.meImg {
+  padding-top: 1rem;
+  width: 30rem;
+  height: 30rem;
+  position: absolute;
+  border-radius: 100rem;
+}
+
+.icons {
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  position: absolute;
+  top: 40rem;
+}
+.resume {
+  width: max-content;
+  height: 100%;
+  color: var(--primary-text-color);
+  border-radius: 0.4rem;
+  border: 1px solid var(--primary-text-color);
+  transition: var(--transition);
+  padding: 1rem;
+  background-color: var(--backgr);
+  font-family: "Lato";
+  font-size: 24px;
+}
+.about {
+  width: 50%;
+  padding: 1rem;
+}
+
+.aboutTitle {
+  display: flex;
+  justify-content: center;
+  font-family: "Lato-Bold";
+  font-size: 40px;
+}
+
+.aboutText {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Lato";
+  font-size: 24px;
+}
+.contact {
+  padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contactBtn {
+  width: max-content;
+  height: 100%;
+  color: var(--primary-text-color);
+  border-radius: 0.4rem;
+  border: 1px solid var(--primary-text-color);
+  transition: var(--transition);
+  padding: 1rem;
+  background-color: var(--backgr);
+  font-size: 24px;
+}
