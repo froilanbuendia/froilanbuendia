@@ -8,11 +8,17 @@ export default function About() {
       <div className={AboutCSS.me}>
         <img src={Me.src} alt="" className={AboutCSS.meImg} />
         <div className={AboutCSS.icons}>
-          <a href="Resume.pdf" target="_blank" rel="noopener noreferrer">
-            <button type="button" className={AboutCSS.resume}>
+          <div>
+            <a
+              href="Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={AboutCSS.resume}
+            >
               Download Resume
-            </button>
-          </a>
+            </a>
+          </div>
+
           <a
             href="https://www.linkedin.com/in/froilan-buendia-97b602209/"
             target="_blank"
@@ -39,11 +45,11 @@ export default function About() {
           build full-stack web applications and always looking forward to
           learning something new.
         </div>
-        <a href="#contact" className={AboutCSS.contact}>
-          <button type="button" className={AboutCSS.contactBtn}>
+        <div className={AboutCSS.contact}>
+          <a href="#contact" className={AboutCSS.contactBtn}>
             Let&lsquo;s Talk
-          </button>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
   );

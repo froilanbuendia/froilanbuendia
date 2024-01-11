@@ -23,6 +23,7 @@
   height: 70vh;
   background-color: whitesmoke;
   border-radius: 3rem;
+  box-shadow: -0.1rem 0 1rem black;
 }
 
 .meImg {
@@ -43,11 +44,12 @@
   top: 40rem;
 }
 .resume {
+  display: flex;
   width: max-content;
   height: 100%;
   color: var(--primary-text-color);
-  border-radius: 0.4rem;
   border: 1px solid var(--primary-text-color);
+  border-radius: 0.4rem;
   transition: var(--transition);
   padding: 1rem;
   background-color: var(--backgr);
@@ -74,19 +76,19 @@
   font-size: 24px;
 }
 .contact {
-  padding-top: 10rem;
   display: flex;
   justify-content: center;
 }
 
 .contactBtn {
-  width: max-content;
-  height: 100%;
+  /* display: flex;
+  justify-content: center; */
   color: var(--primary-text-color);
   border-radius: 0.4rem;
   border: 1px solid var(--primary-text-color);
   transition: var(--transition);
   padding: 1rem;
   background-color: var(--backgr);
+  font-family: "Lato";
   font-size: 24px;
 }
