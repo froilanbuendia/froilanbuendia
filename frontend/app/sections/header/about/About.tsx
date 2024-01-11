@@ -1,6 +1,5 @@
 import AboutCSS from "./about.module.css";
 import Me from "../../../assets/images/me.jpg";
-// import Resume from "../../../assets/files/Resume.pdf";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 export default function About() {
@@ -34,11 +33,11 @@ export default function About() {
       <div className={AboutCSS.about}>
         <div className={AboutCSS.aboutTitle}> About Me</div>
         <div className={AboutCSS.aboutText}>
-          Hello, I'm Froilan! I am an aspiring software engineer pursuing a
-          Bachelor's degree in Computer Science at Cal State Long Beach. I am
-          currently a senior, expecting to graduate in May 2024. I like to build
-          full-stack web applications and always looking forward to learning
-          something new.
+          Hello, I&lsquo;m Froilan! I am an aspiring software engineer pursuing
+          a Bachelor&lsquo;s degree in Computer Science at Cal State Long Beach.
+          I am currently a senior, expecting to graduate in May 2024. I like to
+          build full-stack web applications and always looking forward to
+          learning something new.
         </div>
         <a href="#contact" className={AboutCSS.contact}>
           <button type="button" className={AboutCSS.contactBtn}>
