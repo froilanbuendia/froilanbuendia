@@ -43,3 +43,19 @@
 .contactsSocialIcon {
   font-size: 3rem;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contactsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactsContainer {
+    flex-direction: column;
+    width: max-content;
+    margin: 1rem 1rem 7rem 1rem;
+  }
+  .contactsBox {
+    margin: 1rem 0 0 0;
+  }
+}
