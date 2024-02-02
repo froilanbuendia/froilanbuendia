@@ -27,6 +27,7 @@ export default function Projects() {
             </div>
             <a
               href="https://www.nillysburgershop.com/"
+              target="_blank"
               className={ProjectsCSS.nillysBtn}
             >
               <div className={ProjectsCSS.btn}> Nilly&apos;s Burger Shop</div>
@@ -63,6 +64,7 @@ export default function Projects() {
             </div>
             <a
               href="https://github.com/froilanbuendia/aim-trainer"
+              target="_blank"
               className={ProjectsCSS.aimtrainerBtn}
             >
               <div className={ProjectsCSS.btn}> Aim Trainer</div>
@@ -103,6 +105,7 @@ export default function Projects() {
             </div>
             <a
               href="https://github.com/JHowellLB/ProTasker"
+              target="_blank"
               className={ProjectsCSS.protaskerBtn}
             >
               <div className={ProjectsCSS.btn}> ProTasker</div>
@@ -160,6 +163,7 @@ export default function Projects() {
             </div>
             <a
               href="https://github.com/fmartinezj/Apartment_Management"
+              target="_blank"
               className={ProjectsCSS.apartmentBtn}
             >
               <div className={ProjectsCSS.btn}> Apartment Manager</div>
@@ -217,6 +221,7 @@ export default function Projects() {
             </div>
             <a
               href="https://github.com/froilanbuendia/CECS_325/tree/master/prog_5"
+              target="_blank"
               className={ProjectsCSS.sortracerBtn}
             >
               <div className={ProjectsCSS.btn}>Sort Racer with Linux</div>
@@ -253,6 +258,7 @@ export default function Projects() {
             </div>
             <a
               href="https://github.com/froilanbuendia/CECS_325/tree/master/prog_6"
+              target="_blank"
               className={ProjectsCSS.misspelledwordsBtn}
             >
               <div className={ProjectsCSS.btn}>Misspelled Words</div>
