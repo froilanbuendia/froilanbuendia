@@ -150,7 +150,6 @@
 .skillsApartment,
 .skillsC {
   padding: 0.5rem;
-  /* background: forestgreen; */
   font-size: 1rem;
   border-radius: 0.5rem;
   color: var(--background-color);
@@ -159,21 +158,6 @@
   text-shadow: 0.25rem 0.25rem 0.25rem black;
 }
 
-/* .skillsAim {
-  background-color: lightseagreen;
-}
-
-.skillsProtasker {
-  background: #1da1f2;
-}
-
-.skillsApartment {
-  background: lightgray;
-}
-
-.skillsC {
-  background: gray;
-} */
 .btn {
   position: absolute;
   justify-content: center;
