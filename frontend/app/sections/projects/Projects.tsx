@@ -23,13 +23,13 @@ export default function Projects() {
 
             <div className={ProjectsCSS.projectDescription}>
               Contributued to the development of the official website for
-              Nilly's Burger Shop in Artesia, CA
+              Nilly&apos;s Burger Shop in Artesia, CA
             </div>
             <a
               href="https://www.nillysburgershop.com/"
               className={ProjectsCSS.nillysBtn}
             >
-              <div className={ProjectsCSS.btn}> Nilly's Burger Shop</div>
+              <div className={ProjectsCSS.btn}> Nilly&apos;s Burger Shop</div>
               <div className={ProjectsCSS.scrollerContainer}>
                 <div className={ProjectsCSS.scroller}>
                   <div className={ProjectsCSS.scroller__inner}>

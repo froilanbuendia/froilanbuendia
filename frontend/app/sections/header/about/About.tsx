@@ -39,9 +39,9 @@ export default function About() {
       <div className={AboutCSS.about}>
         <div className={AboutCSS.aboutTitle}> About Me</div>
         <div className={AboutCSS.aboutText}>
-          Hello, I&lsquo;m Froilan! I am an aspiring software engineer pursuing
-          a Bachelor&lsquo;s degree in Computer Science at Cal State Long Beach.
-          I am currently a senior, expecting to graduate in May 2024. I like to
+          Hello, I&apos;m Froilan! I am an aspiring software engineer pursuing a
+          Bachelor&apos;s degree in Computer Science at Cal State Long Beach. I
+          am currently a senior, expecting to graduate in May 2024. I like to
           build full-stack web applications and always looking forward to
           learning something new.
         </div>
