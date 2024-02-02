@@ -7,7 +7,7 @@ export default function About() {
     <div className={AboutCSS.aboutMe}>
       <div className={AboutCSS.me}>
         <img src={Me.src} alt="" className={AboutCSS.meImg} />
-        <div className={AboutCSS.icons}>
+        <div className={AboutCSS.iconsContainer}>
           <div>
             <a
               href="Resume.pdf"
@@ -24,7 +24,7 @@ export default function About() {
             target="_blank"
             className={AboutCSS.linkedIn}
           >
-            <BsLinkedin size={70} />
+            <BsLinkedin />
           </a>
 
           <a
@@ -32,7 +32,7 @@ export default function About() {
             target="_blank"
             className={AboutCSS.github}
           >
-            <FaGithub size={70} />
+            <FaGithub />
           </a>
         </div>
       </div>
@@ -45,8 +45,28 @@ export default function About() {
           build full-stack web applications and always looking forward to
           learning something new.
         </div>
+        <div className={AboutCSS.techSkills}>
+          <div className={AboutCSS.skillsTitle}>Technical Skills</div>
+          <div className={AboutCSS.skills}>
+            <div className={AboutCSS.skillsText}>Python</div>
+            <div className={AboutCSS.skillsText}>Java</div>
+            <div className={AboutCSS.skillsText}>HTML</div>
+            <div className={AboutCSS.skillsText}>CSS</div>
+            <div className={AboutCSS.skillsText}>JavaScript</div>
+            <div className={AboutCSS.skillsText}>TypeScript</div>
+            <div className={AboutCSS.skillsText}>React</div>
+            <div className={AboutCSS.skillsText}>Next.js</div>
+            <div className={AboutCSS.skillsText}>Node.js</div>
+            <div className={AboutCSS.skillsText}>Express.js</div>
+            <div className={AboutCSS.skillsText}>SQL</div>
+            <div className={AboutCSS.skillsText}>PostgreSQL</div>
+            <div className={AboutCSS.skillsText}>MongoDB</div>
+            <div className={AboutCSS.skillsText}>Django</div>
+            <div className={AboutCSS.skillsText}>Linux</div>
+          </div>
+        </div>
         <div className={AboutCSS.contact}>
-          <a href="#contact" className={AboutCSS.contactBtn}>
+          <a href="#contacts" className={AboutCSS.contactBtn}>
             Let&lsquo;s Talk
           </a>
         </div>

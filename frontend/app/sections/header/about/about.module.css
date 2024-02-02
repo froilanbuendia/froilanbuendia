@@ -7,54 +7,81 @@
   font-family: "Lato-Bold";
   src: url(../../../assets/fonts/Lato-Bold.ttf);
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .aboutMe {
-  padding-top: 2.5rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-evenly;
-  padding-right: 5rem;
-  padding-left: 5rem;
+  border: 3px solid var(--primary-text-color);
+  border-radius: 4rem;
+  animation: fadeIn 5s;
+  overflow: hidden;
 }
 
 .me {
   border: 3px solid var(--primary-text-color);
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 50%;
-  height: 70vh;
-  background-color: whitesmoke;
-  border-radius: 3rem;
-  box-shadow: -0.1rem 0 1rem black;
+  background-color: var(--background-color);
+  border-radius: 3.75rem;
 }
 
 .meImg {
-  padding-top: 1rem;
-  width: 30rem;
-  height: 30rem;
-  position: absolute;
+  margin-top: 1rem;
+  width: 27.5rem;
+  height: 27.5rem;
   border-radius: 100rem;
 }
 
-.icons {
-  padding-top: 2.5rem;
+.iconsContainer {
+  margin: 2rem;
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: 20px;
-  position: absolute;
-  top: 40rem;
+  gap: 1.25rem;
+}
+
+.linkedIn {
+  font-size: 4.375rem;
+}
+
+.linkedIn:hover {
+  transform: scale(1.1);
+}
+.github {
+  font-size: 4.375rem;
+  border-radius: 100rem;
+  overflow: hidden;
+}
+
+.github:hover {
+  transform: scale(1.1);
 }
 .resume {
   display: flex;
   width: max-content;
-  height: 100%;
-  color: var(--primary-text-color);
-  border: 1px solid var(--primary-text-color);
+  color: var(--background-color);
   border-radius: 0.4rem;
+  border: 1px solid var(--primary-text-color);
   transition: var(--transition);
   padding: 1rem;
-  background-color: var(--backgr);
+  background-color: var(--primary-text-color);
   font-family: "Lato";
-  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.resume:hover {
+  transform: scale(1.075);
 }
 .about {
   width: 50%;
@@ -65,15 +92,49 @@
   display: flex;
   justify-content: center;
   font-family: "Lato-Bold";
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .aboutText {
-  padding-top: 1rem;
   display: flex;
   justify-content: center;
   font-family: "Lato";
-  font-size: 24px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.skillsTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: "Lato-Bold";
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  gap: 1.25rem;
+}
+
+.skillsText {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  color: var(--primary-text-color);
+  border: 1px solid var(--primary-text-color);
+  border-radius: 0.4rem;
+  transition: var(--transition);
+  padding: 1rem;
+  background-color: var(--background-color);
+  font-family: "Lato";
+  font-size: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--primary-text-color);
+}
+
+.skillsText:hover {
+  transform: scale(1.25);
 }
 .contact {
   display: flex;
@@ -81,14 +142,40 @@
 }
 
 .contactBtn {
-  /* display: flex;
-  justify-content: center; */
-  color: var(--primary-text-color);
+  color: var(--background-color);
   border-radius: 0.4rem;
   border: 1px solid var(--primary-text-color);
   transition: var(--transition);
   padding: 1rem;
-  background-color: var(--backgr);
+  background-color: var(--primary-text-color);
   font-family: "Lato";
-  font-size: 24px;
+  font-size: 1.5rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--primary-text-color);
+}
+
+.contactBtn:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 320px) and (max-width: 991px) {
+  .aboutMe {
+    flex-direction: column;
+  }
+  .me,
+  .about {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 2240px) {
+  .aboutMe {
+    flex-direction: column;
+  }
+  .me,
+  .about {
+    width: 100%;
+  }
+  .skillsText {
+    font-size: 0.95rem;
+  }
 }
