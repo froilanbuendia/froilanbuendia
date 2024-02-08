@@ -189,18 +189,18 @@
 }
 @media (min-width: 424px) and (max-width: 549px) {
   .scroller {
-    width: 40rem;
+    width: 37.5rem;
   }
 }
 
 @media (min-width: 550px) and (max-width: 991px) {
   .scroller {
-    width: 25rem;
+    width: 22.5rem;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1279px) {
   .scroller {
-    width: 30rem;
+    width: 25rem;
   }
 }
