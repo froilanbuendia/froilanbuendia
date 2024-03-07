@@ -41,8 +41,8 @@ export default function About() {
         <div className={AboutCSS.aboutText}>
           Hello, I&apos;m Froilan! I am an aspiring software engineer pursuing a
           Bachelor&apos;s degree in Computer Science at Cal State Long Beach. I
-          am currently a senior, expecting to graduate in May 2024. I like to
-          build full-stack web applications and always looking forward to
+          am currently a senior, expecting to graduate in December 2024. I like
+          to build full-stack web applications and always looking forward to
           learning something new.
         </div>
         <div className={AboutCSS.techSkills}>
