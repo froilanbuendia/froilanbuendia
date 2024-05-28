@@ -7,6 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Froilan Buendia",
   description: "Portolio Website",
+  robots: {
+    index: false,
+    follow: false,
+    noimageindex: true,
+  },
 };
 
 export default function RootLayout({
