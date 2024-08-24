@@ -2,12 +2,11 @@ import contactCSS from "./contacts.module.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-export default function Contacts() {
+const Contacts = () => {
   return (
     <section id="contacts" className={contactCSS.contactsWrapper}>
       <div>
-        <h2 className={contactCSS.contactsTitle}>Contact Me</h2>
-        <div data-aos="zoom-in" className={contactCSS.contactsContainer}>
+        <div className={contactCSS.contactsContainer}>
           <a
             href="mailto:froilangbuendia@gmail.com"
             target="_blank"
@@ -42,4 +41,6 @@ export default function Contacts() {
       </div>
     </section>
   );
-}
+};
+
+export default Contacts;

@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Lato";
+  src: url(../../assets/fonts/Lato-Regular.ttf);
+}
+.mainWrapper {
+  padding-top: 5rem;
+  width: 100vw;
+}
+.forestImg {
+  position: absolute;
+  width: 100vw;
+  height: 95vh;
+  top: 5rem;
+  filter: brightness(75%);
+  z-index: 1;
+}
+
+.selfWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 95vh;
+  position: relative;
+}
+.selfContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: 90%;
+  z-index: 10;
+  padding: 1rem 5rem 1rem 5rem;
+  box-shadow: 0.1rem 0.1rem 5rem black;
+  gap: 1rem;
+  border-radius: 2.5rem;
+}
+
+.selfImg {
+  width: 30rem;
+  filter: opacity(100%);
+  top: 0;
+  border-radius: 10rem;
+}
+
+.textWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-shadow: 0.1rem 0.1rem 0.25rem black;
+  color: white;
+}
+
+.selfText {
+  text-align: center;
+  font-family: "Lato";
+  font-size: 1.125rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .selfWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .selfContainer {
+    flex-direction: column;
+    padding: 1rem 2.5rem;
+    height: auto;
+  }
+  .selfImg {
+    width: 20rem;
+  }
+}
