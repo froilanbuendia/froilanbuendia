@@ -65,6 +65,7 @@
 }
 .sectionWrapper:hover {
   filter: opacity(80%);
+  cursor: pointer;
 }
 .hamburger {
   display: none;
