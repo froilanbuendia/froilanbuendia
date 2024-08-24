@@ -12,6 +12,7 @@
   align-items: center;
   width: 100%;
   height: 5rem;
+  background: black;
 }
 
 .contactsContainer {
@@ -32,6 +33,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+.contactsSocial:hover {
+  filter: opacity(80%);
 }
 .contactsSocialIcon {
   font-size: 2rem;
