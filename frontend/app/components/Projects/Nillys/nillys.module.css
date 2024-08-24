@@ -102,7 +102,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 385vh;
+  top: 385lvh;
   width: 50vw;
   z-index: 10;
 }
