@@ -89,6 +89,7 @@
   z-index: 10;
   text-shadow: 0.1rem 0.1rem 0.25rem black;
   font-size: "Lato";
+  color: white;
 }
 
 .btn {
@@ -102,7 +103,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 292.5lvh;
+  top: 290.5lvh;
   width: 50vw;
   z-index: 10;
 }
