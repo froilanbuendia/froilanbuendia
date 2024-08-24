@@ -71,9 +71,9 @@
 
 .goBeachImg {
   position: absolute;
-  width: 50%; /* Set image container width to half of the page */
-  height: 95vh; /* Adjust as needed to fit the full height */
-  object-fit: cover; /* Ensures the image covers the container without distortion */
+  width: 50%;
+  height: 95vh;
+  object-fit: cover;
   z-index: 1;
   filter: brightness(80%);
 }
@@ -136,6 +136,6 @@
   }
   .goBeachImg {
     width: 100%;
-    height: 50vh; /* Adjust as needed to fit the full height */
+    height: 50vh;
   }
 }

@@ -50,11 +50,6 @@ const ProTasker = () => {
             <div className={ProTaskerCSS.projectText}>3</div>
           </div>
         )}
-        {/* {slide === 4 && (
-          <div className={ProTaskerCSS.projectDescription}>
-            <div className={ProTaskerCSS.projectText}>4</div>
-          </div>
-        )} */}
         <div className={ProTaskerCSS.arrowContainer}>
           <button
             className={ProTaskerCSS.prevArrow}
