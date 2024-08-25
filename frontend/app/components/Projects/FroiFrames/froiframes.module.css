@@ -50,6 +50,7 @@
   width: 50vw;
   font-size: 2rem;
   z-index: 10;
+  padding-inline: 1rem;
 }
 .prevArrow,
 .nextArrow {

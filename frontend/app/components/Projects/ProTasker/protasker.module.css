@@ -48,6 +48,7 @@
   width: 50vw;
   font-size: 2rem;
   z-index: 10;
+  padding-inline: 1rem;
 }
 
 .projectText {
@@ -71,15 +72,6 @@
 .nextArrow:hover {
   filter: opacity(40%);
   background: lightgray;
-}
-
-.nillysSelfImg {
-  position: absolute;
-  width: 50%;
-  height: 95vh;
-  object-fit: cover;
-  z-index: 1;
-  filter: brightness(80%);
 }
 
 .projectDescription {
@@ -137,10 +129,5 @@
 
   .arrowContainer {
     width: 100vw;
-  }
-
-  .nillysSelfImg {
-    width: 100%;
-    height: 50vh;
   }
 }
