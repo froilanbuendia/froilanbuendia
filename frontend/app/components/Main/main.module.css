@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "Lato";
-  src: url(../../assets/fonts/Lato-Regular.ttf);
-}
 .mainWrapper {
   padding-top: 5rem;
   width: 100vw;
@@ -46,6 +42,7 @@
 
 .textWrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -54,13 +51,47 @@
   color: white;
 }
 
+.skillsTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: "Lato-Bold";
+  padding-top: 1rem;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  gap: 1.25rem;
+}
+
+.skillsText {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  color: white;
+  border: 0.0625rem solid white;
+  border-radius: 0.4rem;
+  transition: var(--transition);
+  padding: 1rem;
+  background-color: rgba(211, 211, 211, 0.25); /* lightgray with 30% opacity */
+  font-family: "Lato";
+  font-size: 1rem;
+}
+
+.skillsText:hover {
+  transform: scale(1.25);
+}
+
 .selfText {
   text-align: center;
   font-family: "Lato";
   font-size: 1.125rem;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .selfWrapper {
     display: flex;
     justify-content: center;
@@ -68,10 +99,65 @@
   }
   .selfContainer {
     flex-direction: column;
-    padding: 1rem 2.5rem;
+    padding: 1rem;
     height: auto;
+    box-shadow: 0.1rem 0.1rem 1.25rem black;
+  }
+  .selfImg {
+    width: 15rem;
+  }
+
+  .selfText {
+    font-size: 0.875rem;
+  }
+
+  .skillsTitle {
+    font-size: 0.875rem;
+  }
+
+  .skills {
+    gap: 0.5rem;
+  }
+
+  .skillsText {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .skillsText:hover {
+    transform: scale(1.125);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .selfWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .selfContainer {
+    flex-direction: column;
+    padding: 1rem 1.125rem;
+    height: auto;
+    box-shadow: 0.1rem 0.1rem 2.5rem black;
   }
   .selfImg {
     width: 20rem;
+  }
+
+  .selfText {
+    font-size: 1rem;
+  }
+
+  .skillsTitle {
+    font-size: 1rem;
+  }
+
+  .skills {
+    gap: 1rem;
+  }
+  .skillsText {
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0.375rem;
   }
 }

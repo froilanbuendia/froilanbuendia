@@ -1,0 +1,157 @@
+.projectTitleWrapper {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: linear-gradient(
+      30deg,
+      black 12%,
+      transparent 12.5%,
+      transparent 87%,
+      black 87.5%,
+      black
+    ),
+    linear-gradient(
+      150deg,
+      white 12%,
+      transparent 12.5%,
+      transparent 87%,
+      white 87.5%
+    ),
+    linear-gradient(
+      30deg,
+      black 12%,
+      transparent 12.5%,
+      transparent 87%,
+      black 87.5%,
+      black
+    ),
+    linear-gradient(
+      150deg,
+      white 12%,
+      transparent 12.5%,
+      transparent 87%,
+      white 87.5%,
+      white
+    ),
+    linear-gradient(
+      60deg,
+      black 25%,
+      transparent 25.5%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(
+      60deg,
+      black 25%,
+      transparent 25.5%,
+      transparent 75%,
+      black 75%
+    );
+  background-size: 20px 35px;
+  background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+  padding-block: 4rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.projectTitle {
+  display: flex;
+  font-family: "Sea-Dog";
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.625); /* lightgray with 30% opacity */
+  padding: 1rem 2rem;
+}
+
+.basketball {
+  position: relative;
+  top: 75px;
+  /* left: -50px; */
+}
+
+.ball {
+  position: absolute;
+  background-color: #e76f51;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border: 2px solid #333;
+  animation: roll 4s linear infinite; /* Rolling back and forth */
+}
+.ball:before,
+.ball:after {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  width: 60px; /* Match the ball's width */
+  height: 2px; /* Line thickness */
+  top: 50%; /* Center vertically */
+  left: 0; /* Align with the ball's left edge */
+  transform: translateY(-50%); /* Correct the vertical alignment */
+}
+
+.ball:before {
+  transform: rotate(45deg) translateY(-50%);
+}
+
+.ball:after {
+  transform: rotate(-45deg) translateY(-50%);
+}
+
+.lines {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #333;
+  width: 42px;
+  height: 42px;
+  left: -11px;
+  top: -11px;
+}
+
+.lines:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #333;
+  width: 42px;
+  height: 42px;
+  top: 39px;
+  left: 38px;
+}
+
+.shadow {
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  top: 57px;
+  z-index: -1;
+  left: 2px;
+  animation: roll-shadow 4s linear infinite; /* Sync shadow with roll */
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(325px) rotate(180deg); /* Move to the right with clockwise rotation */
+  }
+  100% {
+    transform: translateX(0) rotate(-180deg); /* Return to the left with counterclockwise rotation */
+  }
+}
+
+@keyframes roll-shadow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(325px); /* Move shadow to the right */
+  }
+  100% {
+    transform: translateX(0); /* Return shadow to the start */
+  }
+}

@@ -28,9 +28,14 @@ const Navbar = () => {
               }}
             />
           ) : (
-            <Link href="#contacts">
-              <div className={NavCSS.contact}>Contact</div>
-            </Link>
+            <div className={NavCSS.sectionContainer}>
+              <Link href="#projects">
+                <div className={NavCSS.contact}>Projects</div>
+              </Link>
+              <Link href="#contacts">
+                <div className={NavCSS.contact}>Contact</div>
+              </Link>
+            </div>
           )}
           {menu ? (
             <IoClose

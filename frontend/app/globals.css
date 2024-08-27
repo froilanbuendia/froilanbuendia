@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Sea-Dog";
+  src: url(./assets/fonts/SeaDog3D-aRYa.otf);
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(./assets/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Arizonia";
+  src: url(./assets/fonts/Arizonia-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url(./assets/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url(./assets/fonts/Merriweather-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Patua";
+  src: url(./assets/fonts/PatuaOne-Regular.ttf);
+}
+
 :root {
   --background-color: #f5f5f5;
   --primary-text-color: #000;
@@ -19,7 +49,7 @@
 body {
   color: var(--primary-text-color);
   background: var(--background-color);
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 html {

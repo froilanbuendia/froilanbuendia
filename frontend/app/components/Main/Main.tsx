@@ -19,6 +19,26 @@ const Main = () => {
               December 2024. I like to build full-stack web applications and
               always looking forward to learning something new.
             </div>
+            <div className={MainCSS.techSkills}>
+              <div className={MainCSS.skillsTitle}>Technical Skills</div>
+              <div className={MainCSS.skills}>
+                <div className={MainCSS.skillsText}>Python</div>
+                <div className={MainCSS.skillsText}>Java</div>
+                <div className={MainCSS.skillsText}>HTML</div>
+                <div className={MainCSS.skillsText}>CSS</div>
+                <div className={MainCSS.skillsText}>JavaScript</div>
+                <div className={MainCSS.skillsText}>TypeScript</div>
+                <div className={MainCSS.skillsText}>React</div>
+                <div className={MainCSS.skillsText}>Next.js</div>
+                <div className={MainCSS.skillsText}>Node.js</div>
+                <div className={MainCSS.skillsText}>Express.js</div>
+                <div className={MainCSS.skillsText}>SQL</div>
+                <div className={MainCSS.skillsText}>PostgreSQL</div>
+                <div className={MainCSS.skillsText}>MongoDB</div>
+                <div className={MainCSS.skillsText}>Django</div>
+                <div className={MainCSS.skillsText}>Linux</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
