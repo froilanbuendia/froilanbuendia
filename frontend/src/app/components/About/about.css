@@ -143,6 +143,7 @@ ul {
 }
 
 .work-btn {
+  margin: 0 auto;
   background: var(--secondary);
   padding: 0.5rem 1rem;
   font-weight: 700;
@@ -151,6 +152,7 @@ ul {
   border-top: 1px solid var(--highlight);
   text-shadow: var(--shadow-s);
   box-shadow: var(--shadow-l);
+  font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 .work-btn:hover {

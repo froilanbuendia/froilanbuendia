@@ -65,7 +65,7 @@ const About = ({ aboutRef, handleHeroRef }: AboutProps) => {
                 }}
                 transition={{ duration: 0.5 }}
               >
-                Let's Work Together
+                Send an Email
               </motion.a>
             </div>
           </div>
