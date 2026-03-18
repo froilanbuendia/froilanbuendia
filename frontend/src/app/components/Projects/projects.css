@@ -1,0 +1,75 @@
+.section-title {
+  text-align: center;
+  padding-block: 1rem;
+}
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 450px;
+  min-height: 25vh;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 1.125rem;
+  box-shadow: var(--shadow-s);
+  border-top: 1px solid var(--highlight);
+}
+
+.project-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.project-title {
+  font-family: "Algreya-Bold";
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  text-decoration: underline;
+  padding-bottom: 0.25rem;
+}
+
+.project-description {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.project-stack-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.project-stack-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.project-github {
+  box-shadow: var(--shadow-s);
+  border-radius: 5rem;
+}
+
+.github-profile {
+  margin-block: 2rem;
+  margin: 2rem auto;
+  width: fit-content;
+  display: flex;
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--primary);
+  text-shadow: var(--shadow-s);
+}
+
+@media screen and (min-width: 768px) {
+  .project-container {
+    max-width: 760px;
+  }
+}
