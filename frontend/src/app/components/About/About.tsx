@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosArrowUp, IoIosPaper } from "react-icons/io";
 import AboutNav from "./AboutNav";
-import FroiNillys from "../../../../public/nillys.jpeg";
 import "./about.css";
 import AboutDescription from "./AboutDescription";
 import Image from "next/image";
@@ -36,7 +35,9 @@ const About = ({ aboutRef, handleHeroRef }: AboutProps) => {
         <div className="about-container">
           <div className="about-img-container">
             <Image
-              src={FroiNillys}
+              src="/nillys.jpeg"
+              width={0}
+              height={0}
               alt="Froilan Nilly's Headshot"
               className="about-img"
             />

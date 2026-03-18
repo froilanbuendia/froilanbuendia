@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import FroiGrad from "../../../../public/grad-photo.jpeg";
 import { motion } from "framer-motion";
 import { IoIosArrowDown, IoIosPaper } from "react-icons/io";
 import { GrProjects } from "react-icons/gr";
@@ -71,9 +70,11 @@ const Hero = ({ heroRef, handleAboutRef, handleProjectsRef }: ButtonProps) => {
       </motion.div>
       <div className="hero-img-wrapper">
         <MotionImage
-          src={FroiGrad}
+          src="/grad-photo.jpeg"
           alt="Picture of Froilan from graduation photos and California State University of Long Beach"
           className="hero-img"
+          width={0}
+          height={0}
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
