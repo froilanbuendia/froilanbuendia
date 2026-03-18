@@ -1,0 +1,93 @@
+.hero-me-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 10;
+  min-height: 100vh;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-name {
+  font-size: clamp(3rem, 8vw, 6rem);
+  text-shadow: var(--shadow-hero);
+  line-height: 0.25;
+  font-family: "Algreya-Black";
+}
+
+.hero-job {
+  text-shadow: var(--shadow-hero);
+  color: var(--primary);
+}
+
+.hero-img-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.hero-img {
+  width: clamp(350px, 40vw, 550px);
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  z-index: 1;
+  will-change: transform;
+  filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.25));
+}
+
+.hero-btn-container {
+  display: flex;
+  gap: 0.5em;
+}
+
+.hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--highlight);
+  border-radius: 10em;
+  padding: 0.5em 1em;
+  font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+  box-shadow: var(--shadow-s);
+  font-weight: 800;
+  color: var(--text);
+}
+
+.primary-btn {
+  background-color: var(--secondary);
+  color: var(--bg-light);
+}
+
+.hero-about {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-decoration: underline;
+  border: none;
+  color: var(--secondary);
+  background: none;
+  text-shadow: var(--shadow-s);
+}
+
+.hero-btn:hover,
+.hero-about:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-img {
+    right: 2.5rem;
+  }
+}
