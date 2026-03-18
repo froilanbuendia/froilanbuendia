@@ -1,3 +1,4 @@
+"use client";
 import { RefObject, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";

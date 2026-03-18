@@ -1,7 +1,7 @@
+"use client";
 import { motion } from "framer-motion";
 import { IconType } from "react-icons";
 import { FaGithub } from "react-icons/fa";
-
 import "./projects.css";
 import Link from "next/link";
 type StackItem = {

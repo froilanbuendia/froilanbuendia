@@ -5,7 +5,7 @@ import Projects from "./components/Projects/Projects";
 import ScrollProgressBar from "./components/ScrollProgressBar/ScrollProgressBar";
 import { useRef } from "react";
 
-export default function Home() {
+export default function Page() {
   const aboutRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
   const heroRef = useRef<HTMLElement>(null);

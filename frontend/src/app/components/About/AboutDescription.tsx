@@ -1,3 +1,4 @@
+"use client";
 import { IconType } from "react-icons";
 import { motion } from "framer-motion";
 
@@ -20,12 +21,12 @@ const AboutDescription = ({ content, tags }: AboutDescriptionProps) => {
                 <motion.span
                   key={i}
                   className="tag"
-                  animate={{ scale: [1, 1.02, 1] }} // grow and shrink
+                  animate={{ scale: [1, 1.02, 1] }}
                   transition={{
-                    duration: 2, // seconds for one breath cycle
+                    duration: 2,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    delay: i * 0.2, // stagger effect for each tag
+                    delay: i * 0.2,
                   }}
                   whileHover={{
                     scale: 1.05,
