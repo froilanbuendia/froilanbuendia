@@ -76,7 +76,6 @@ body {
 }
 
 section {
-  /* min-height: 100vh; */
   padding-inline: 1rem;
   max-width: 1200px;
   margin: 0 auto;
