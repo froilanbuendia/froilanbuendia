@@ -13,6 +13,8 @@ import {
   SiFirebase,
   SiAvaloniaui,
   SiDotnet,
+  SiGatsby,
+  SiExpress,
 } from "react-icons/si";
 import "./projects.css";
 
@@ -22,7 +24,7 @@ type ProjectsProps = {
 
 const Projects = ({ projectsRef }: ProjectsProps) => {
   return (
-    <section ref={projectsRef}>
+    <section ref={projectsRef} className="projects-section">
       <motion.h2
         className="section-title"
         initial={{ opacity: 0, y: 40 }}
@@ -34,26 +36,31 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
       </motion.h2>
       <div className="projects-wrapper">
         <ProjectCard
-          title="Nilly's Website"
-          description="Contributed to the development of a website for a local family-owned restaurant, leading implementation of the Menu and Contact pages using reusable components. Integrated Google Maps API to display the restaurant location and improve customer accessibility."
+          title="Nilly's Burger Shop"
+          description="Built and deployed a website for a real local restaurant — actively used by customers to find the location and get in touch. Led the contact page with Google Maps integration, a direct phone link, and an email form so customers can reach the restaurant in one click."
           stack={[
-            { name: "React", icon: FaReact },
+            { name: "Gatsby", icon: SiGatsby },
             { name: "TypeScript", icon: SiTypescript },
             { name: "Google Maps API", icon: SiGooglemaps },
             { name: "Netlify", icon: SiNetlify },
           ]}
-          github="https://github.com/nillysburgers/nillysburgershop-website"
+          github=""
+          demo="https://www.nillysburgershop.com/"
+          featured
+          status="live"
         />
         <ProjectCard
           title="LetMeRun"
-          description="A full-stack training and analytics app that connects with Strava to track and visualize runner performance. Features interactive cards for mileage and injury risk, heatmaps for distance, effort, and elevation, and personalized insights to optimize training and recovery."
+          description="Personal training dashboard that connects to Strava via OAuth 2.0 to pull real workout data and surface insights I actually use for marathon training. Tracks mileage load, flags overtraining risk, and visualizes pace and elevation trends through interactive Chart.js graphs."
           stack={[
-            { name: "React", icon: FaReact },
-            { name: "Node", icon: FaNodeJs },
+            { name: "Next.js", icon: SiNextdotjs },
+            { name: "Node / Express", icon: SiExpress },
             { name: "PostgreSQL", icon: SiPostgresql },
-            { name: "Strava", icon: FaStrava },
+            { name: "Strava API", icon: FaStrava },
           ]}
           github="https://github.com/froilanbuendia/RunBalance"
+          featured
+          status="in-progress"
         />
         <ProjectCard
           title="Aim Trainer"
@@ -66,6 +73,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
             { name: "Firebase", icon: SiFirebase },
           ]}
           github="https://github.com/froilanbuendia/aim-trainer"
+          status="archived"
         />
         <ProjectCard
           title="ProTasker"
@@ -75,6 +83,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
             { name: "TypeScript", icon: SiTypescript },
           ]}
           github="https://github.com/JHowellLB/ProTasker"
+          status="archived"
         />
         <ProjectCard
           title="GradBook"
@@ -85,6 +94,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
             { name: "Render", icon: SiRender },
           ]}
           github="https://github.com/froilanbuendia/Froi-Grad"
+          status="archived"
         />
         <ProjectCard
           title="Chess Engine"
@@ -94,6 +104,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
             { name: "Avalonia", icon: SiAvaloniaui },
           ]}
           github=""
+          status="archived"
         />
       </div>
       <motion.a
