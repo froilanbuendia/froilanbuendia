@@ -16,6 +16,7 @@
   padding: 0;
   margin: 0;
 }
+
 :root {
   --bg-dark: oklch(0.92 0 252);
   --bg: oklch(0.96 0 252);
@@ -39,7 +40,7 @@
   --shadow-l:
     0px 4px 6px hsla(0, 0%, 0%, 0.07), 0px 6px 10px hsla(0, 0%, 0%, 0.15);
   --shadow-hero: -4px 2px var(--bg);
-
+  --navbar-bg: oklch(0.96 0 252 / 0.88);
   --text-white: oklch(0.96 0 252);
   --text-white-muted: oklch(93.86% 0.00213 14.438);
   --card-bg: linear-gradient(135deg, var(--bg-light), var(--bg-dark));
@@ -61,6 +62,7 @@
     --warning: oklch(0.7 0.05 100);
     --success: oklch(0.7 0.05 160);
     --info: oklch(0.2136 0.0617 249.24);
+    --navbar-bg: oklch(0.15 0 252 / 0.88);
   }
 }
 
