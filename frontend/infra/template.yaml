@@ -1,0 +1,152 @@
+Resources:
+  SiteBucket397A1860:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: froilanbuendia.com-site
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Enabled
+    UpdateReplacePolicy: Retain
+    DeletionPolicy: Retain
+    Metadata:
+      aws:cdk:path: InfraStack/SiteBucket/Resource
+  SiteBucketPolicy3AC1D0F8:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket:
+        Ref: SiteBucket397A1860
+      PolicyDocument:
+        Statement:
+          - Action: s3:GetObject
+            Condition:
+              StringEquals:
+                AWS:SourceArn:
+                  Fn::Join:
+                    - ""
+                    - - "arn:"
+                      - Ref: AWS::Partition
+                      - ":cloudfront::"
+                      - Ref: AWS::AccountId
+                      - :distribution/
+                      - Ref: SiteDistribution3FF9535D
+            Effect: Allow
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Resource:
+              Fn::Join:
+                - ""
+                - - Fn::GetAtt:
+                      - SiteBucket397A1860
+                      - Arn
+                  - /*
+        Version: "2012-10-17"
+    Metadata:
+      aws:cdk:path: InfraStack/SiteBucket/Policy/Resource
+  SiteDistributionOrigin1S3OriginAccessControl7D960FE6:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: InfraStackSiteDistributionOrigin1S3OriginAccessControl58AA89F9
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+    Metadata:
+      aws:cdk:path: InfraStack/SiteDistribution/Origin1/S3OriginAccessControl/Resource
+  SiteDistribution3FF9535D:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - froilanbuendia.com
+          - www.froilanbuendia.com
+        DefaultCacheBehavior:
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+          Compress: true
+          TargetOriginId: InfraStackSiteDistributionOrigin1F73D04B5
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: index.html
+        Enabled: true
+        HttpVersion: http2
+        IPV6Enabled: true
+        Origins:
+          - DomainName:
+              Fn::GetAtt:
+                - SiteBucket397A1860
+                - RegionalDomainName
+            Id: InfraStackSiteDistributionOrigin1F73D04B5
+            OriginAccessControlId:
+              Fn::GetAtt:
+                - SiteDistributionOrigin1S3OriginAccessControl7D960FE6
+                - Id
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+        ViewerCertificate:
+          AcmCertificateArn: arn:aws:acm:us-east-1:389050373429:certificate/5991407a-cfec-4aa6-aa76-6cdf461466cc
+          MinimumProtocolVersion: TLSv1.2_2021
+          SslSupportMethod: sni-only
+    Metadata:
+      aws:cdk:path: InfraStack/SiteDistribution/Resource
+  ApexAliasRecordCCE6BE0E:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName:
+          Fn::GetAtt:
+            - SiteDistribution3FF9535D
+            - DomainName
+        HostedZoneId:
+          Fn::FindInMap:
+            - AWSCloudFrontPartitionHostedZoneIdMap
+            - Ref: AWS::Partition
+            - zoneId
+      HostedZoneId: Z07056191SMFSTUMNWUFP
+      Name: froilanbuendia.com.
+      Type: A
+    Metadata:
+      aws:cdk:path: InfraStack/ApexAliasRecord/Resource
+  WwwAliasRecord1B442697:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName:
+          Fn::GetAtt:
+            - SiteDistribution3FF9535D
+            - DomainName
+        HostedZoneId:
+          Fn::FindInMap:
+            - AWSCloudFrontPartitionHostedZoneIdMap
+            - Ref: AWS::Partition
+            - zoneId
+      HostedZoneId: Z07056191SMFSTUMNWUFP
+      Name: www.froilanbuendia.com.
+      Type: A
+    Metadata:
+      aws:cdk:path: InfraStack/WwwAliasRecord/Resource
+  CDKMetadata:
+    Type: AWS::CDK::Metadata
+    Properties:
+      Analytics: v2:deflate64:H4sIAAAAAAAA/8VSy07DMBD8FnxEToBWgNRbW67QKj1WCDn2pnXz2Gi9TgVR/h03aaocuHNaa/Y1M+tZPHt5ih/v1NlF2uRRYdO43bHSuQzQV+vmcbvyOgfetyLtHx+qBLEQ90KKBshZrMCIBZMHKdICdb71aWH1Umtw7lpIUGKjii2GxHfACFjZSnSfcp1Vw3w5hKHktqzvn5YN+U7qAr3JCCuO2zfrmGzqOXAJnQYy5QtewVE1FkksWoFkD2HflbWFM9CWkFHjlJOxBJojxujIXDvRSWGwDEQvkkcpGohtZrXi0YXrvgSRN+kpTBhJ7+abfu9gxTpwJSz2Idfr+SN3gadiOknoGZ7DEZYJaCQT5P0Ew2+2XrDJQVjRYTRN/ndpr3KgvQPuOpmAQ08aLvi7qmtbHXojPNeeO1mhgfjkHprZPH4Nf/LkrI3IV2xLiJMh/gKQhK4ZsAIAAA==
+    Metadata:
+      aws:cdk:path: InfraStack/CDKMetadata/Default
+Mappings:
+  AWSCloudFrontPartitionHostedZoneIdMap:
+    aws:
+      zoneId: Z2FDTNDATAQYW2
+    aws-cn:
+      zoneId: Z3RFFRIM2A3IF5
+Outputs:
+  DistributionDomainName:
+    Value:
+      Fn::GetAtt:
+        - SiteDistribution3FF9535D
+        - DomainName
+Parameters:
+  BootstrapVersion:
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /cdk-bootstrap/hnb659fds/version
+    Description: Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]
+
