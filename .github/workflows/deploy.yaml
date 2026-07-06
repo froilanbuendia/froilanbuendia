@@ -30,12 +30,21 @@ jobs:
 
       - name: CDK deploy
         working-directory: frontend/infra
-        run: npx cdk deploy --require-approval never
+        id: cdk_deploy
+        run: |
+          npx cdk deploy --require-approval never --outputs-file outputs.json
         env:
           DOMAIN_NAME: froilanbuendia.com
           CERT_ARN: ${{ secrets.CERT_ARN }}
           CDK_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
           CDK_REGION: us-west-2
+
+      - name: Extract Distribution ID
+        working-directory: frontend/infra
+        id: dist_id
+        run: |
+          DIST_ID=$(jq -r '.InfraStack.DistributionId' outputs.json)
+          echo "dist_id=$DIST_ID" >> "$GITHUB_OUTPUT"
 
       # --- Site: build and deploy static files ---
       - name: Install frontend deps
@@ -53,7 +62,4 @@ jobs:
 
       - name: Invalidate CloudFront cache
         run: |
-          DIST_ID=$(aws cloudfront list-distributions \
-            --query "DistributionList.Items[?contains(Aliases.Items, 'froilanbuendia.com')].Id" \
-            --output text)
-          aws cloudfront create-invalidation --distribution-id $DIST_ID --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ steps.dist_id.outputs.dist_id }} --paths "/*"
