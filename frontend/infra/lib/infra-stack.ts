@@ -143,7 +143,7 @@ export class InfraStack extends cdk.Stack {
           },
           StringLike: {
             "token.actions.githubusercontent.com:sub":
-              "repo:froilanbuendia/YOUR_REPO_NAME:*",
+              "repo:froilanbuendia/froilanbuendia:*",
           },
         },
       ),
