@@ -1,0 +1,59 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::389050373429:role/InfraStack-GitHubDeployRoleED73FD64-yolx1507uK8g
+          aws-region: us-west-2
+
+      # --- Infra: deploy any CDK changes ---
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install infra deps
+        working-directory: frontend/infra
+        run: npm ci
+
+      - name: CDK deploy
+        working-directory: frontend/infra
+        run: npx cdk deploy --require-approval never
+        env:
+          DOMAIN_NAME: froilanbuendia.com
+          CERT_ARN: ${{ secrets.CERT_ARN }}
+          CDK_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
+          CDK_REGION: us-west-2
+
+      # --- Site: build and deploy static files ---
+      - name: Install frontend deps
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build site
+        working-directory: frontend
+        run: npm run build
+        env:
+          NEXT_PUBLIC_VISITOR_API_URL: ${{ secrets.NEXT_PUBLIC_VISITOR_API_URL }}
+
+      - name: Sync to S3
+        run: aws s3 sync frontend/out/ s3://froilanbuendia.com-site/ --delete
+
+      - name: Invalidate CloudFront cache
+        run: |
+          DIST_ID=$(aws cloudfront list-distributions \
+            --query "DistributionList.Items[?contains(Aliases.Items, 'froilanbuendia.com')].Id" \
+            --output text)
+          aws cloudfront create-invalidation --distribution-id $DIST_ID --paths "/*"
