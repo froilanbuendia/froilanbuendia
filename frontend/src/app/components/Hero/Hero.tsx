@@ -26,7 +26,7 @@ const currentlyItems = [
 const nameWords = ["Froilan", "Buendia"];
 
 const Hero = ({ heroRef, handleProjectsRef }: HeroProps) => {
-  const MotionImage = motion(Image);
+  const MotionImage = motion.create(Image);
 
   // ── Typewriter state ──
   const [titleIndex, setTitleIndex] = useState(0);

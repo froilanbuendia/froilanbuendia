@@ -116,8 +116,8 @@
     padding: 0.25rem 0.625rem;
     font-size: 0.8rem;
     gap: 0.3rem;
-    /* override desktop padding */
     padding-block: 0.25rem;
+    color: var(--brand-color);
   }
 
   /* Hide fill bar on chips — doesn't suit the format */

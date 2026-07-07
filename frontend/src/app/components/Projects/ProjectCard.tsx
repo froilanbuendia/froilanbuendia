@@ -9,6 +9,7 @@ import Link from "next/link";
 type StackItem = {
   name: string;
   icon: IconType;
+  color?: string;
 };
 
 type ProjectCardProps = {
@@ -115,7 +116,11 @@ const ProjectCard = ({
             {stack.map((s) => {
               const Icon = s.icon;
               return (
-                <div className="stack-item" key={s.name}>
+                <div
+                  className="stack-item"
+                  key={s.name}
+                  style={s.color ? ({ "--brand-color": s.color } as React.CSSProperties) : undefined}
+                >
                   <Icon size={14} />
                   <span>{s.name}</span>
                 </div>

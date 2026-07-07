@@ -8,23 +8,19 @@
 }
 
 .projects-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 2rem;
 }
 
-/* ── Tilt wrapper — owns flex sizing + perspective ── */
+/* ── Tilt wrapper — owns perspective ── */
 .project-tilt-wrapper {
-  flex: 1 1 450px;
-  max-width: 760px;
   perspective: 900px;
 }
 
 .project-tilt-wrapper--featured {
-  flex: 1 1 420px;
-  max-width: calc(50% - 0.5rem);
+  perspective: 900px;
 }
 
 /* ── Card ── */
@@ -149,7 +145,7 @@
   gap: 0.25rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--brand-color, var(--text-muted));
   background: var(--bg-dark);
   padding: 0.2rem 0.5rem;
   border-radius: 2rem;
@@ -190,8 +186,8 @@
   text-shadow: var(--shadow-s);
 }
 
-@media screen and (max-width: 768px) {
-  .project-tilt-wrapper--featured {
-    max-width: 100%;
+@media screen and (max-width: 900px) {
+  .projects-wrapper {
+    grid-template-columns: 1fr;
   }
 }

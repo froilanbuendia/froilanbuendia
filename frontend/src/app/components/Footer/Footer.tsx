@@ -7,7 +7,6 @@ const Footer = () => {
 
   const VISITOR_API_URL = process.env.NEXT_PUBLIC_VISITOR_API_URL;
 
-  console.log("here", VISITOR_API_URL);
   useEffect(() => {
     if (!VISITOR_API_URL) {
       console.error("NEXT_PUBLIC_VISITOR_API_URL is not set");
