@@ -92,7 +92,7 @@ export class InfraStack extends cdk.Stack {
       this,
       "VisitorCounterFunction",
       {
-        runtime: lambda.Runtime.NODEJS_20_X,
+        runtime: lambda.Runtime.NODEJS_24_X,
         entry: path.join(__dirname, "../lambda/visitor-counter/index.mjs"),
         handler: "handler",
         environment: {
