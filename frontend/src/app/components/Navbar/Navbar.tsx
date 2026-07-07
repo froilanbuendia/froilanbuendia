@@ -16,7 +16,7 @@ const Navbar = ({ scrollTo }: NavbarProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const links = ["skills", "projects", "about", "contact"];
+  const links = ["skills", "projects", "about", "education", "contact"];
 
   return (
     <nav className={`navbar${scrolled ? " navbar-scrolled" : ""}`}>

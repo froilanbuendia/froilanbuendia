@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
+import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
@@ -14,6 +15,7 @@ export default function Page() {
   const skillsRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
+  const educationRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
 
   const refs: Record<string, React.RefObject<HTMLElement | null>> = {
@@ -21,6 +23,7 @@ export default function Page() {
     skills: skillsRef,
     projects: projectsRef,
     about: aboutRef,
+    education: educationRef,
     contact: contactRef,
   };
 
@@ -39,6 +42,7 @@ export default function Page() {
       <Skills skillsRef={skillsRef} />
       <Projects projectsRef={projectsRef} />
       <About aboutRef={aboutRef} />
+      <Education educationRef={educationRef} />
       <Contact contactRef={contactRef} />
       <Footer />
     </div>

@@ -75,6 +75,80 @@
   color: var(--text);
 }
 
+.certs-section {
+  max-width: 760px;
+  margin-inline: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.certs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--card-bg);
+  border-top: 1px solid var(--highlight);
+  border-left: 3px solid var(--cert-color);
+  border-radius: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  box-shadow: var(--shadow-s);
+}
+
+.cert-card--featured {
+  padding: 1.25rem 1.5rem;
+  border-left-width: 4px;
+  box-shadow: var(--shadow-m);
+}
+
+.cert-icon {
+  color: var(--cert-color);
+  flex-shrink: 0;
+}
+
+.cert-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cert-title {
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.cert-card--featured .cert-title {
+  font-size: 1.0625rem;
+}
+
+.cert-issuer {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.cert-badge {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cert-color);
+  background: color-mix(in srgb, var(--cert-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--cert-color) 30%, transparent);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2rem;
+}
+
 @media screen and (max-width: 500px) {
   .education-card {
     flex-direction: column;

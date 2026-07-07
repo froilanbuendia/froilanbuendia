@@ -66,6 +66,11 @@
   }
 }
 
+html {
+  background-color: var(--bg);
+  background-image: var(--gradient);
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -73,7 +78,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   color: var(--text);
-  background: var(--gradient);
   font-family: "Mada";
 }
 

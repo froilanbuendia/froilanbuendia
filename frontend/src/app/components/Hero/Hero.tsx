@@ -13,10 +13,10 @@ type HeroProps = {
 };
 
 const titles = [
-  "Software Engineer",
+  "Computer Science Graduate",
   "Full-Stack Developer",
   "Frontend Developer",
-  "Sports Tech Builder",
+  "Marathoner",
 ];
 const currentlyItems = [
   "Training for a marathon",

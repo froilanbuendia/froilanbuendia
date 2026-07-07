@@ -11,8 +11,6 @@ import {
   SiPostgresql,
   SiRender,
   SiFirebase,
-  SiAvaloniaui,
-  SiDotnet,
   SiGatsby,
   SiExpress,
 } from "react-icons/si";
@@ -35,6 +33,21 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
         Projects
       </motion.h2>
       <div className="projects-wrapper">
+        <ProjectCard
+          title="froilanbuendia.com"
+          description="This portfolio — a fully serverless site on AWS. Next.js is statically exported and served globally via CloudFront backed by a private S3 bucket with Origin Access Control. A real-time visitor counter is powered by Lambda and DynamoDB behind an HTTP API Gateway. All infrastructure is defined as code with AWS CDK and deployed automatically through GitHub Actions using OIDC for keyless auth — no stored credentials."
+          stack={[
+            { name: "Next.js", icon: SiNextdotjs },
+            { name: "AWS CDK", icon: FaAws },
+            { name: "S3 & CloudFront", icon: FaAws },
+            { name: "Lambda & DynamoDB", icon: FaAws },
+            { name: "Route 53", icon: FaAws },
+          ]}
+          github="https://github.com/froilanbuendia/froilanbuendia"
+          demo="https://froilanbuendia.com"
+          featured
+          status="live"
+        />
         <ProjectCard
           title="Nilly's Burger Shop"
           description="Built and deployed a website for a real local restaurant — actively used by customers to find the location and get in touch. Led the contact page with Google Maps integration, a direct phone link, and an email form so customers can reach the restaurant in one click."
@@ -90,13 +103,13 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
           description="A photo album web app for storing and sharing senior year and graduation photos. Features fast global delivery using CloudFront with S3-hosted images, and smooth user experience through pagination and asynchronous image loading."
           stack={[
             { name: "Next.js", icon: SiNextdotjs },
-            { name: "Amazon S3", icon: FaAws },
+            { name: "S3 & CloudFront", icon: FaAws },
             { name: "Render", icon: SiRender },
           ]}
           github="https://github.com/froilanbuendia/Froi-Grad"
           status="archived"
         />
-        <ProjectCard
+        {/* <ProjectCard
           title="Chess Engine"
           description="A fully-featured chess engine and interface supporting move validation, check/checkmate detection, and advanced attack calculations. Features a visual board with piece images, interactive square selection, and dynamic highlighting of possible moves and attacked positions. Implements core chess rules including pawn and king movement, and provides an extensible architecture for future enhancements like castling and en passant."
           stack={[
@@ -105,7 +118,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
           ]}
           github=""
           status="archived"
-        />
+        /> */}
       </div>
       <motion.a
         href="https://github.com/froilanbuendia"
