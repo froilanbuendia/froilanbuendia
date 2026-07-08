@@ -128,28 +128,30 @@ const ProjectCard = ({
             })}
           </div>
 
-          {demo && (
-            <Link
-              href={demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-github-link"
-            >
-              <FaExternalLinkAlt size={12} />
-              <span>Live</span>
-            </Link>
-          )}
-          {github && (
-            <Link
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-github-link"
-            >
-              <FaGithub size={14} />
-              <span>Code</span>
-            </Link>
-          )}
+          <div className="project-links">
+            {demo && (
+              <Link
+                href={demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-github-link"
+              >
+                <FaExternalLinkAlt size={12} />
+                <span>Live</span>
+              </Link>
+            )}
+            {github && (
+              <Link
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-github-link"
+              >
+                <FaGithub size={14} />
+                <span>Code</span>
+              </Link>
+            )}
+          </div>
         </div>
       </motion.div>
     </motion.div>
