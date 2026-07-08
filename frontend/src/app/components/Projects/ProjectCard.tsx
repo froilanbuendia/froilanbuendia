@@ -1,26 +1,11 @@
 "use client";
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { IconType } from "react-icons";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "./projects.css";
 import Link from "next/link";
-
-type StackItem = {
-  name: string;
-  icon: IconType;
-  color?: string;
-};
-
-type ProjectCardProps = {
-  title: string;
-  description: string;
-  stack: StackItem[];
-  github: string;
-  demo?: string;
-  featured?: boolean;
-  status?: "in-progress" | "live" | "archived";
-};
+import type { ProjectData } from "./projects.data";
+import { fadeUp } from "@/lib/animations";
 
 const ProjectCard = ({
   title,
@@ -30,7 +15,7 @@ const ProjectCard = ({
   demo,
   featured,
   status,
-}: ProjectCardProps) => {
+}: ProjectData) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const rotateX = useMotionValue(0);
@@ -68,10 +53,7 @@ const ProjectCard = ({
   return (
     <motion.div
       className={`project-tilt-wrapper${featured ? " project-tilt-wrapper--featured" : ""}`}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+      {...fadeUp}
     >
       <motion.div
         ref={cardRef}

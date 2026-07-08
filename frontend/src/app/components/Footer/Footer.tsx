@@ -9,14 +9,20 @@ const Footer = () => {
 
   useEffect(() => {
     if (!VISITOR_API_URL) {
-      console.error("NEXT_PUBLIC_VISITOR_API_URL is not set");
+      if (process.env.NODE_ENV === "development") {
+        console.error("NEXT_PUBLIC_VISITOR_API_URL is not set");
+      }
       return;
     }
 
     fetch(VISITOR_API_URL, { method: "POST" })
       .then((res) => res.json())
       .then((data) => setCount(data.count))
-      .catch((err) => console.error("Visitor counter error:", err));
+      .catch((err) => {
+        if (process.env.NODE_ENV === "development") {
+          console.error("Visitor counter error:", err);
+        }
+      });
   }, []);
   return (
     <footer className="footer">

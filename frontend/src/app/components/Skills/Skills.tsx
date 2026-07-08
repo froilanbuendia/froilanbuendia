@@ -14,6 +14,7 @@ import {
 } from "react-icons/si";
 import { FaReact, FaNodeJs, FaAws, FaGithub, FaGitAlt } from "react-icons/fa";
 import { IconType } from "react-icons";
+import { fadeUp } from "@/lib/animations";
 import "./skills.css";
 
 type SkillItem = {
@@ -87,13 +88,7 @@ type SkillsProps = {
 const Skills = ({ skillsRef }: SkillsProps) => {
   return (
     <section ref={skillsRef} className="skills-section">
-      <motion.h2
-        className="section-title"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
+      <motion.h2 className="section-title" {...fadeUp}>
         Skills
       </motion.h2>
       <div className="skills-grid">

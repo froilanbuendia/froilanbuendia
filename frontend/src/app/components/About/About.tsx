@@ -3,6 +3,7 @@ import { RefObject } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { FaGraduationCap } from "react-icons/fa";
 import Image from "next/image";
+import { fadeUp } from "@/lib/animations";
 import "./about.css";
 
 type AboutProps = {
@@ -39,22 +40,13 @@ const About = ({ aboutRef }: AboutProps) => {
 
   return (
     <section ref={aboutRef} className="about-section">
-      <motion.h2
-        className="section-title"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
+      <motion.h2 className="section-title" {...fadeUp}>
         About
       </motion.h2>
 
       <motion.div
         className="about-card"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+        {...fadeUp}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >

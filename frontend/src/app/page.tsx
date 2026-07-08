@@ -35,7 +35,7 @@ export default function Page() {
   };
 
   return (
-    <div className="page-container">
+    <main className="page-container">
       <ScrollProgressBar />
       <Navbar scrollTo={scrollTo} />
       <Hero heroRef={heroRef} handleProjectsRef={() => scrollTo("projects")} />
@@ -45,6 +45,6 @@ export default function Page() {
       <Education educationRef={educationRef} />
       <Contact contactRef={contactRef} />
       <Footer />
-    </div>
+    </main>
   );
 }

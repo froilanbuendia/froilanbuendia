@@ -3,6 +3,7 @@ import { RefObject } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { IoIosPaper } from "react-icons/io";
+import { fadeUp } from "@/lib/animations";
 import "./contact.css";
 
 type ContactProps = {
@@ -12,18 +13,12 @@ type ContactProps = {
 const Contact = ({ contactRef }: ContactProps) => {
   return (
     <section ref={contactRef} className="contact-section">
-      <motion.div
-        className="contact-wrapper"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
+      <motion.div className="contact-wrapper" {...fadeUp}>
         <h2 className="contact-title">Let&apos;s Connect</h2>
         <p className="contact-subtitle">
-          I&apos;m actively looking for full-time software engineering roles.
-          If you have an opportunity, a project, or just want to say hello —
-          feel free to reach out.
+          I&apos;m actively looking for full-time software engineering roles. If
+          you have an opportunity, a project, or just want to say hello — feel
+          free to reach out.
         </p>
         <motion.a
           className="contact-email-btn"

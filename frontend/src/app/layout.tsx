@@ -1,5 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f2f2f6" },
+    { media: "(prefers-color-scheme: dark)", color: "#1e1e26" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://froilanbuendia.com"),
@@ -27,6 +36,10 @@ export const metadata: Metadata = {
     description:
       "Portfolio and resume of Froilan Buendia, showcasing projects in full-stack development and cloud infrastructure.",
     images: ["/favicon-32.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

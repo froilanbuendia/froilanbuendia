@@ -26,6 +26,7 @@ const Navbar = ({ scrollTo }: NavbarProps) => {
           onClick={() => scrollTo("hero")}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.1 }}
+          aria-label="Back to top"
         >
           FB.
         </motion.button>

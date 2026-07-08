@@ -3,6 +3,7 @@ import { RefObject } from "react";
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaAws, FaCode } from "react-icons/fa";
 import { IconType } from "react-icons";
+import { fadeUp } from "@/lib/animations";
 import "./education.css";
 
 type EducationProps = {
@@ -50,13 +51,7 @@ const certs: Cert[] = [
 const Education = ({ educationRef }: EducationProps) => {
   return (
     <section ref={educationRef} className="education-section">
-      <motion.h2
-        className="section-title"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
+      <motion.h2 className="section-title" {...fadeUp}>
         Education
       </motion.h2>
 
@@ -92,7 +87,7 @@ const Education = ({ educationRef }: EducationProps) => {
       </motion.div>
 
       <div className="certs-section">
-        <span className="education-course-label">Certifications</span>
+        <motion.span className="education-course-label" {...fadeUp}>Certifications</motion.span>
         <div className="certs-list">
           {certs.map((cert, i) => {
             const Icon = cert.icon;
